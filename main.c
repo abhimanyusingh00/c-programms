@@ -1,31 +1,29 @@
-//program to determine the largest numbers between three numbers using nested if statement.
+// program to check eligibility of particular course based on marks
 #include<stdio.h>
-int main ()
+int main()
 {
-    int a,b,c;
-    printf("Enter the first number:\n");
-    scanf("%d",&a);
-    printf("Enter the second number: \n");
-    scanf("%d",&b);
-    printf("Enter the third number: \n");
-    scanf("%d",&c);
-    if(a>b)
-    {
-        if(a>c)
-        {
-            printf("The largest number is = %d \n",a);
-        }
-        else;
-        printf("The largest number is = %d \n",c);
+    int M,P,C,MP,total;
+    printf("Enter the marks of physics: \n");
+    scanf("%d",&P);
+    printf("Enter the marks of chemistry: \n ");
+    scanf("%d",&C);
+    printf("Enter the marks of mathematics: \n");
+    scanf("%d",&M);
+    MP= M + P;
+    printf("The total marks of maths and physics are = %d",MP);
+    total=M+P+C;
+    printf(" \n The total marks of all the three subjects is : \n %d",total);
+    if (M>=60)
+             if(P>=40)
+                 if(C>=50)
+                if((total)>=200||(MP)>=150)
+                   printf(" \n The  candidate is eligible for admission.\n");
+                else
+                  printf(" \n The candidate is not eligible.\n");
+                 else
+            printf(" \n The candidate is not eligible.\n");
+             else
+           printf(" \n The candidate is not eligible.\n");
+        else
+         printf(" \n The candidate is not eligible.\n");
     }
-    if(b>c)
-    {
-            printf("The largest number is = %d \n",b);
-        }
-        else;
-        {
-            printf("The largest number is = %d \n",c);
-        }
-    return 0;
-}
-
