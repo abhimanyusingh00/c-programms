@@ -1,29 +1,29 @@
-// program to check eligibility of particular course based on marks
+// program to find the sum of series of 1 – x^2/2! + x^4/4! -…. upto nth term.
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int M,P,C,MP,total;
-    printf("Enter the marks of physics: \n");
-    scanf("%d",&P);
-    printf("Enter the marks of chemistry: \n ");
-    scanf("%d",&C);
-    printf("Enter the marks of mathematics: \n");
-    scanf("%d",&M);
-    MP= M + P;
-    printf("The total marks of maths and physics are = %d",MP);
-    total=M+P+C;
-    printf(" \n The total marks of all the three subjects is : \n %d",total);
-    if (M>=60)
-             if(P>=40)
-                 if(C>=50)
-                if((total)>=200||(MP)>=150)
-                   printf(" \n The  candidate is eligible for admission.\n");
-                else
-                  printf(" \n The candidate is not eligible.\n");
-                 else
-            printf(" \n The candidate is not eligible.\n");
-             else
-           printf(" \n The candidate is not eligible.\n");
-        else
-         printf(" \n The candidate is not eligible.\n");
+    int i,j,num,x,n;
+    float sum,fact;
+    printf("Enter the value of last term of series = ");
+    scanf("%d",&num);
+    printf("Enter the value of x in series = ");
+    scanf("%d",&x);
+    sum=1;
+    for(i=0;i<=n;i++)
+    {
+        fact=1;
+        for(j=2*i;j>=1;j--)
+        {
+            fact=fact*j;
+        }
+            if(i%2==0)
+                sum=sum+pow(x,2*i)/fact;
+            else
+                sum=sum-pow(x,2*i)/fact;
+        
     }
+    printf("The sum of series is given by : %4f \n",sum);
+    return 0;
+    
+}
